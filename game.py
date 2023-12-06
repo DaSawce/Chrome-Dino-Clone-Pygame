@@ -1,16 +1,19 @@
 import pygame
 import os
 
+#INITIALIZE PYGAME TO PROGRAM
 pygame.init()
 
+#MUST SET SCREEN SIZES
 SCREEN_HEIGHT = 600
 SCREEN_WIDTH = 1100
 
-SCREEN = pygame.display.set_mode((SCREEN_HEIGHT,SCREEN_WIDTH))
+SCREEN = pygame.display.set_mode((SCREEN_WIDTH,SCREEN_HEIGHT))
 
 START = pygame.image.load(os.path.join("Assets/Dino", "DinoStart.png"))
 DEAD = pygame.image.load(os.path.join("Assets/Dino", "DinoDead.png"))
 
+#LOAD SPRITES WITH ITS OWN PICTURES FROM ASSETS FOLDER
 RUNNING = [pygame.image.load(os.path.join("Assets/Dino", "DinoRun1.png")),
            pygame.image.load(os.path.join("Assets/Dino", "DinoRun1.png"))]
 
@@ -33,9 +36,11 @@ CLOUD = pygame.image.load(os.path.join("Assets/Other", "Cloud.png"))
 BACKGROUND = pygame.image.load(os.path.join("Assets/Other", "Track.png"))
 
 
+class Dinosaur:
+    X_POSITION =
+    Y_POSITION =
 
-
-
+#LOOP TO RUN GAME 
 def main():
     run = True
     clock=pygame.time.Clock()
@@ -49,4 +54,8 @@ def main():
         SCREEN.fill((255, 255, 255))
         userInput = pygame.key.get_pressed()
 
-    pygame.display.update
+        player.draw(SCREEN)
+        player.update(userInput)
+
+        clock.tick(60)
+        pygame.display.update
