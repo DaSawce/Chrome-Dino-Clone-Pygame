@@ -37,8 +37,11 @@ BACKGROUND = pygame.image.load(os.path.join("Assets/Other", "Track.png"))
 
 
 class Dinosaur:
-    X_POSITION =
-    Y_POSITION =
+    X_POSITION = 80
+    Y_POSITION = 310
+
+    def __init__(self):
+        
 
 #LOOP TO RUN GAME 
 def main():
