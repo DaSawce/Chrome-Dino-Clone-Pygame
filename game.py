@@ -36,7 +36,7 @@ CLOUD = pygame.image.load(os.path.join("Assets/Other", "Cloud.png"))
 
 BACKGROUND = pygame.image.load(os.path.join("Assets/Other", "Track.png"))
 
-
+#Dinosaur class with positions & actions
 class Dinosaur:
     X_POSITION = 80
     Y_POSITION = 310
