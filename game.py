@@ -40,6 +40,8 @@ BACKGROUND = pygame.image.load(os.path.join("Assets/Other", "Track.png"))
 class Dinosaur:
     X_POSITION = 80
     Y_POSITION = 310
+    Y_POS_DUCK = 340
+    JUMP_VEL = 8.5
 
     def __init__(self):
         self.duck_img = DUCKING
@@ -63,6 +65,14 @@ def main():
     run = True
     clock=pygame.time.Clock()
     player = Dinosaur()
+    cloud = Cloud()
+    game_speed = 20
+    x_pos_bg = 0
+    y_pos_bg = 380
+    points = 0
+    font = pygame.font.Font('freesansbold.ttf', 20)
+    obstacles = []
+    death_count = 0
 
     while run:
         for event in pygame.event.get():
