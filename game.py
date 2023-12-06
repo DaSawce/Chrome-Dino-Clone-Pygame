@@ -43,6 +43,7 @@ class Dinosaur:
     Y_POS_DUCK = 340
     JUMP_VEL = 8.5
 
+#actions list
     def __init__(self):
         self.duck_img = DUCKING
         self.run_img = RUNNING
