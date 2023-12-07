@@ -59,6 +59,22 @@ class Dinosaur:
         self.dino_rect = self.image.get_rect()
         self.dino_rect.x = self.X_POS
         self.dino_rect.y = self.Y_POS
+
+#update dinosaur for every while loop iteration
+    def update(self, userInput):
+        if self.dino_duck:
+            self.duck()
+        if self.dino_run:
+            self.run()
+        if self.dino_jump:
+            self.jump()
+
+        if self.step_index >= 10:
+            self.step_index = 0
+
+        
+
+
         
 
 #LOOP TO RUN GAME 
@@ -75,6 +91,7 @@ def main():
     obstacles = []
     death_count = 0
 
+#Exit game once exit is clicked
     while run:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -87,4 +104,4 @@ def main():
         player.update(userInput)
 
         clock.tick(60)
-        pygame.display.update
+        pygame.display.update()
